@@ -1,10 +1,7 @@
 pipeline {
-      agent {label 'linux'
-      }
-      stage('echo'){
-        steps{
-         sh 'echo "Hello Word!"'
-          }
+      agent {label 'linux'}
+      stages {
+        stage('Hello from git')
         }
      }
 
