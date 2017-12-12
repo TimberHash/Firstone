@@ -1,11 +1,17 @@
 pipeline {
       agent {label 'linux'}
       stages {
-        stage('Hello from git') {
-         steps {
-           echo "Hello World!"
-           }
+        stage('checkout'){
+          steps{
+          git 'https://github.com/TimberHash/Firstone.git'
           }
         }
-     }
+        stage('compile'){
+         steps {
+         sh 'gcc example.c -o example'
+         }
+        }
+      }
+    }
+    
 
