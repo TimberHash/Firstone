@@ -8,7 +8,8 @@ pipeline {
         }
         stage('compile'){
          steps {
-         sh 'gcc example.c -o example'
+          sh 'cd c'
+          sh 'gcc example.c -o example'
          }
         }
       }
